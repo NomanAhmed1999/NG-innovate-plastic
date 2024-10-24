@@ -143,13 +143,14 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgb(36, 35, 35);
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  /* padding: 20px 0; */
   transition: all 0.5s;
   z-index: 997;
+  height: 100px;
 }
 
 .header .logo {
@@ -157,7 +158,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 50px;
+  max-height: 100px;
   margin-right: 8px;
 }
 
@@ -1008,6 +1009,13 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+.services{
+  background-color:  rgba(42, 44, 57, 0.9);
+}
+.color{
+  color: white !important;
+}
 .services .service-item {
   background-color: var(--surface-color);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
@@ -1367,6 +1375,9 @@ section,
 /*--------------------------------------------------------------
 # Faq Section
 --------------------------------------------------------------*/
+#faq{
+  background-color:  rgba(42, 44, 57, 0.9);
+}
 .faq .content-subtitle {
   font-size: 15px;
   margin-bottom: 10px;
@@ -2557,4 +2568,8 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.mt-banner{
+  margin-top: 100px;
 }
