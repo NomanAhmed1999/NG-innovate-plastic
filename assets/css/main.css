@@ -964,47 +964,6 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Call To Action Section
---------------------------------------------------------------*/
-.call-to-action {
-  padding: 80px 0;
-  position: relative;
-  clip-path: inset(0);
-}
-
-.call-to-action .container {
-  position: relative;
-  z-index: 3;
-}
-
-.call-to-action h3 {
-  color: var(--default-color);
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.call-to-action p {
-  color: var(--default-color);
-}
-
-.call-to-action .cta-btn {
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.call-to-action .cta-btn:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-}
 
 /*--------------------------------------------------------------
 # Services Section
@@ -1028,9 +987,11 @@ section,
 }
 
 .services .service-item .icon {
-  position: absolute;
+  /* position: absolute;
   left: -20px;
-  top: calc(50% - 30px);
+  top: calc(50% - 30px); */
+  display: flex;
+  justify-content: center;
 }
 
 .services .service-item .icon i {
