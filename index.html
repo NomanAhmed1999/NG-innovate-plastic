@@ -10,7 +10,7 @@
 
   <!-- Favicons -->
   <link href="./assets/img/favicon-1.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./assets/img/favicon-1.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -542,7 +542,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h3>Email Us</h3>
-                  <p>info@nginnovate.com</p>
+                  <p>info@ng-innovate.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -659,6 +659,9 @@
       }
       emailjs.send("service_jk6toop", "template_5mnbupa", params).then(function (res) {
         alert("Message Sent Successfully");
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
       })
     }
   
