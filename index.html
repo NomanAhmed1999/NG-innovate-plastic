@@ -245,7 +245,7 @@
                 <img src="./assets/img/icons/icon-3.png" alt="">
               </div>
               <a href="./services.html#services-2">
-              <h3>Injection Stretch Blow Molding</h3>
+                <h3>Injection Stretch Blow Molding</h3>
               </a>
               <p>In this process a plastic preformed PET component is formed by injection molding on the machine.</p>
             </div>
@@ -259,7 +259,7 @@
               </div>
 
               <a href="./services.html#services-3">
-              <h3>Injection Blow Molding</h3>
+                <h3>Injection Blow Molding</h3>
               </a>
 
               <p>This process bridges the gap between blow molding and injection stretch blow molding providing
@@ -275,7 +275,7 @@
               </div>
 
               <a href="./services.html#services-4">
-              <h3>Customer Support</h3>
+                <h3>Customer Support</h3>
               </a>
 
               <p>Professional customer service that exceeds expectations.</p>
@@ -290,7 +290,7 @@
               </div>
 
               <a href="./services.html#services-5">
-              <h3>Injection Molding</h3>
+                <h3>Injection Molding</h3>
               </a>
 
               <p>In injection molding molten plastic is forced from a heated cylinder under pressure into a cavity of a
@@ -533,7 +533,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <p>C-2/D, SITE Area Karachi-75700, Pakistan</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -554,19 +554,15 @@
                 <div class="row gy-4">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required="">
                   </div>
 
                   <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required="">
                   </div>
 
                   <div class="col-md-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-md-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <textarea class="form-control" id="message" name="message" rows="6" placeholder="Message" required=""></textarea>
                   </div>
 
                   <div class="col-md-12 text-center">
@@ -574,7 +570,7 @@
                     <div class="error-message"></div>
                     <div class="sent-message">Your message has been sent. Thank you!</div>
 
-                    <button type="submit">Send Message</button>
+                    <button onclick="sendMail()" type="button">Send Message</button>
                   </div>
 
                 </div>
@@ -631,8 +627,42 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
+  <!-- Main JS File
+   5AD29B483F5DEB327EA3E3DE3EC7B78D8FF7
+    -->
   <script src="assets/js/main.js"></script>
+
+  
+
+   <!-- Main JS File
+   5AD29B483F5DEB327EA3E3DE3EC7B78D8FF7
+    -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "BSr6WXhfvUwvych4M",
+        });
+      })();
+    </script>
+  
+  
+  
+  <script>
+    function sendMail() {
+  
+      var params = {
+        from_name: document.getElementById("name").value,
+        email_id: document.getElementById("email").value,
+        message: document.getElementById("message").value
+      }
+      emailjs.send("service_jk6toop", "template_5mnbupa", params).then(function (res) {
+        alert("Message Sent Successfully");
+      })
+    }
+  
+  </script>
 
 </body>
 
